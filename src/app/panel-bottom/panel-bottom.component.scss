@@ -1,0 +1,141 @@
+:root(app-panel-bottom) {
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+#panel-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#bottom {
+    display: flex;
+    justify-content: space-around;
+    padding: 23px 0;
+    background-color: #000000;
+}
+
+.bottom-tabs {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: space-between;
+    grid-gap: 0.22rem;
+}
+
+.bottom-tab {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #2d2d2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 0 0 var(--col-border), 2px 2px 0 0 var(--col-border);
+    position: relative;
+}
+
+.bottom-tab:hover {
+    border: 1px solid var(--col-border-pics);
+
+    .tab-filtro {
+        mix-blend-mode: normal;
+    }
+}
+
+.bt-tab-icon {
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.tab-filtro {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: var(--col-shadow-mid);
+    mix-blend-mode: multiply;
+}
+
+.bottom-buttons {
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.bottom-button {
+    width: 85px;
+    height: 85px;
+    border-radius: 100%;
+    border: 3px solid var(--col-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: border 100ms;
+}
+
+
+.bottom-button:hover {
+    border: 3px solid var(--col-border-pics);
+    transition: border 100ms;
+
+    .gerenciar-filtro {
+        background: var(--col-shadow-mid);
+        mix-blend-mode: normal;
+        transition: background 100ms;
+    }
+}
+
+.gerenciar-filtro {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: var(--col-shadow-mid);
+    mix-blend-mode: multiply;
+    transition: background 100ms;
+}
+
+.bt-gerenciar-icon {
+    width: 105%;
+    height: 105%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+}
+
+.bottom-skills {
+    width: 387px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.bottom-skill {
+    width: 66px;
+    height: 44px;
+    border: 1px solid var(--col-border);
+    display: flex;
+}
+
+.bt-skill-icon {
+    width: 2rem;
+    object-fit: cover;
+}
+
+
+.bt-skill-value {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-family: "Coustard", serif;
+    font-size: 1rem;
+    font-weight: normal;
+}

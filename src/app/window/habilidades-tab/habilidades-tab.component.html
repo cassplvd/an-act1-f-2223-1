@@ -1,0 +1,56 @@
+<main class="rel hab-main h-86" (click)="desativaInfo()">
+    <div class="side-tabs-container">
+        <div class="side-tabs">
+            <div class="side-tab" [ngClass]="tab === tabAtivo? 'st-active':''" *ngFor="let tab of categorias"
+                (click)="switchSideTab(tab)">
+                <img src="/assets/{{tabsSide[categorias.indexOf(tab)]}}.svg" alt="" class="st-icon">
+            </div>
+        </div>
+    </div>
+    <div class="content-box">
+        <div class="atr-info">
+            <p class="atr-name">{{categoriasTitulo[categorias.indexOf(tabAtivo)]}}</p>
+        </div>
+        <div id="info-area">
+            <div class="load-box" *ngIf="loading">
+                <mat-spinner strokeWidth="2" color="warn"></mat-spinner>
+            </div>
+            <div class="hab-box cursor-point" *ngFor="let habilidade of habArray" (mouseleave)="mouseOff(habilidade)"
+                (click)="editarOn(habilidade)"
+                [ngClass]="[mudadosArray.includes(habilidade)?'hab-b-act':'', selecionadoNome === habilidade?'editing':'']"
+                [@view] (mouseenter)="mouseIn(habilidade)">
+                <div class="hab-info">
+                    <p class="hab-name">{{habilidades[habilidade]}}</p>
+                </div>
+                <div class="f-row g-15 info-box">
+                    <div class="hab-icon">
+                        <div class="icon-border" [ngClass]="mudadosArray.includes(habilidade)?'mdd':''">
+                            <img [src]="imagensObject[habilidades[habilidade]]?'../../../assets/'+imagensObject[habilidades[habilidade]].img : 'forca.png'"
+                                class="icon-skill">
+
+                        </div>
+                    </div>
+                    <div class="hab-value">
+                        <input type="number" class="hab-pontos" [value]="pontos[habilidade]"
+                            (change)="mudouSeAlgo(habilidade, $event)"
+                            [ngClass]="selecionadoNome === habilidade? 'pontos-on':''">
+                        <button mat-raised-button class="hab-mais-btn" [@onAndOff]
+                            *ngIf="selecionadoNome === habilidade" (click)="pontosSomar(habilidade)"
+                            (mousedown)="initInterval('somar', habilidade)" (mouseup)="clearInterval()">
+                            <mat-icon class="change-btn">add_circle</mat-icon>
+                        </button>
+                        <button mat-raised-button class="hab-menos-btn" [@onAndOff]
+                            *ngIf="selecionadoNome === habilidade" (click)="pontosDiminuir(habilidade)"
+                            (mousedown)="initInterval('diminuir', habilidade)" (mouseup)="clearInterval()">
+                            <mat-icon class="change-btn">remove_circle</mat-icon>
+                        </button>
+                        <button mat-raised-button class="hab-revert-btn" [@onAndOff]
+                            *ngIf="mudadosArray.includes(habilidade)" (click)="reverter(habilidade)">
+                            <mat-icon class="change-btn btn-rvt">replay</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

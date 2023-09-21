@@ -1,0 +1,44 @@
+<div class="painel" id="card-box">
+    <div class="ri-panel-top" *ngIf="!hoverInfo" [@inOut]>
+        <div class="players">
+            <div class="player" *ngFor="let player of jogadores">
+                <div class="player-icon-box" src="" matTooltipClass="t-tip" matTooltipPosition="right"
+                    matTooltip="{{player.nome}}">
+                    <img class="player-icon-img" src="../../assets/{{player.img}}" alt="">
+                </div>
+                <div class="player-stat" matTooltipClass="t-tip" matTooltipPosition="below"
+                    matTooltip="Vida: {{player.vida}}">
+                    <mat-progress-bar mode="determinate" class="stat-bar-amt" [value]="player.vida"></mat-progress-bar>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ri-panel-main" *ngIf="hoverInfo" [@inOut]>
+        <div class="info-box">
+            <div class="info-titulo">{{categoriaTitulo}}</div>
+            <div class="icone-box" *ngIf="dado !== 'invalido'">
+                <figure class="icone-border">
+                    <img *ngIf="img" src="../../assets/{{img}}" class="info-icone">
+                </figure>
+            </div>
+            <div *ngIf="dado !== 'invalido'" class="info-nome-txt">
+                {{titulo}}
+            </div>
+            <p *ngIf="dado !== 'invalido'" class="info-descricao-txt">
+                {{descricao}}
+            </p>
+        </div>
+    </div>
+
+    <div class="ri-panel-bottom" *ngIf="!hoverInfo" [@inOut]>
+        <div class="titulo-local">
+            <div class="local-txt">{{localSelecionado.nome}}</div>
+        </div>
+        <div class="local-info-box">
+            <div class="local-info local-estado">Localidade: {{localSelecionado.estado}}</div>
+            <div class="local-info local-populacao">Habitantes: {{localSelecionado.habitantes}}</div>
+            <div class="local-info local-atividades">Atividades: {{localSelecionado.atividades}}</div>
+        </div>
+    </div>
+</div>

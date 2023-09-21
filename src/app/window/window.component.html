@@ -1,0 +1,26 @@
+<div id="formulario" action="">
+    <!-- <img src="../../assets/close btn.svg" alt="close"> -->
+    <button mat-button id="close-btn" (click)="fecharWindow()">
+        <mat-icon class="close-btn">cancel</mat-icon>
+    </button>
+    <header id="tab-area">
+        <div class="tab" (click)="mudarAba(pagina)" [ngClass]="tabAtiva === pagina ? 'tab-active' : '' "
+            *ngFor="let pagina of tabsNomes">
+            {{tabs[pagina].nome}}</div>
+    </header>
+    <hr class="separator">
+
+    <router-outlet></router-outlet>
+
+    <hr class="separator">
+    <footer id="foot-area" class="f-row g-15 jc-center pr-20 pt-7">
+        <button mat-button class="lh-0 mw-0 bg-col bd-col fill-col" [disabled]="!reqButtonAtivoSet"
+            *ngIf="botoesMudanca" (click)="clearMudancas()">
+            Desfazer
+        </button>
+        <button mat-button class="lh-0 mw-0 bg-col bd-col fill-col bold" [disabled]="!reqButtonAtivoSet"
+            *ngIf="botoesMudanca" (click)="enviarMudancas()">
+            Salvar
+        </button>
+    </footer>
+</div>

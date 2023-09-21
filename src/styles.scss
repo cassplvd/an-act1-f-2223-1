@@ -1,0 +1,370 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --col-tex-prim: #e59d2c;
+    --col-tex-sec: rgb(161, 160, 140);
+    --col-sep: #42422b;
+    --col-bg: #363636;
+    --col-border: #252525;
+    --col-arrow-high: rgb(100, 149, 97);
+    --col-arrow-mid: #bf7d37;
+    --col-arrow-low: #a54040;
+    --col-shadow-high: rgba(100, 149, 97, 0.305);
+    --col-shadow-mid: #a67c3e49;
+    --col-shadow-low: #d23e3e4f;
+    --col-border-pics: #908766;
+    // --col-reverter: rgb(50 78 161);
+    // --col-reverter: rgb(63 81 217);
+    --col-reverter: rgb(177 141 57);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: 'IM Fell English', serif;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: black;
+}
+
+div,
+p,
+h1,
+h2 {
+    cursor: default;
+}
+
+button.mat-menu-item {
+    width: 100%;
+    line-height: 1rem;
+    height: 2rem;
+}
+
+.mat-progress-bar-buffer {
+    background-color: #363636 !important;
+}
+
+.mat-progress-bar-fill::after {
+    background-color: #e59d2c !important;
+}
+
+
+.bio-txt {
+    color: var(--col-tex-sec);
+}
+
+.field {
+    outline: 2px solid transparent;
+    color: var(--col-tex-sec);
+    transition: outline 0.3s ease-in, color 0.3s ease-in;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.field:hover:not(:focus) {
+    outline: 2px solid #42422b;
+    transition: outline 0.3s ease;
+    position: static !important;
+    z-index: 1 !important;
+}
+
+.field:focus {
+    position: static !important;
+    z-index: 2 !important;
+    background-color: black !important;
+    box-shadow: 0 0 5px 3px black !important;
+    outline: 2px solid #242424;
+    color: rgb(219, 215, 207) !important;
+    transition: outline 0.3s ease-out, color 0.3s ease-in;
+}
+
+.main-txt {
+    color: var(--col-tex-sec) !important;
+    height: 1.5rem !important;
+    line-height: 1.5rem !important;
+}
+
+.label-txt {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.overf-y-auto {
+    overflow-y: auto;
+}
+
+.overf-y-initial {
+    overflow-y: initial !important;
+}
+
+.margin-0 {
+    margin: 0;
+}
+
+.padd-0 {
+    padding: 0;
+}
+
+.atr-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--col-sep);
+    width: 100%;
+    height: fit-content;
+}
+
+.atr-name {
+    color: var(--col-tex-prim);
+    margin-top: 4px;
+    font-size: 1.5rem !important;
+    padding: 6px 0;
+    transition: color 500ms;
+    font-weight: bold;
+}
+
+.hist-pic {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 0px 3px black, 0 0 0px 6px var(--col-border-pics);
+    margin-top: 10%;
+    background-color: var(--col-border-pics);
+}
+
+.mat-menu-item {
+    font-family: "IM Fell English", serif !important;
+    font-weight: bold !important;
+}
+
+.mat-menu-panel {
+    background: #434036 !important;
+    color: var(--col-tex-sec) !important;
+    min-height: 2rem !important;
+}
+
+.mat-menu-item {
+    color: inherit !important;
+}
+
+.mat-button-disabled {
+    border: rgba(147, 147, 147, 0.26) !important;
+    color: rgba(147, 147, 147, 0.26) !important;
+    cursor: not-allowed !important;
+}
+
+.f-s-20 {
+    font-size: 1.3rem;
+}
+
+.f-s-32 {
+    font-size: 2rem;
+}
+
+.separator {
+    height: 1px;
+    width: 100%;
+    background-color: #42422b;
+}
+
+
+
+.painel {
+    position: absolute;
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 32px);
+    background-color: rgb(0, 0, 0);
+}
+
+.t-tip {
+    margin-bottom: -5px !important;
+    background-color: #e59d2c !important;
+    color: black !important;
+    font-size: 0.7rem !important;
+    box-shadow: 0 2px 5px black !important;
+    font-family: "Coustard", serif;
+}
+
+
+.bg-col {
+    background-color: #252525;
+}
+
+.bd-col {
+    border: 2px solid #363636 !important;
+}
+
+.line-col {
+    // color: #363636;
+    color: #fff;
+}
+
+.fill-col {
+    color: #e59d2c;
+}
+
+.api-col {
+    color: #e59d2c;
+}
+
+mat-spinner>svg>circle {
+    stroke: #63c1d8 !important;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+// body {
+//     background-image: url('./assets/Screenshot\ 2022-11-13\ at\ 15-18-20\ Ficha.png');
+//     background-size: 1358px 649px;
+// }
+
+.f-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.f-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.f-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.pr-20 {
+    padding-right: 20px;
+}
+
+.pt-7 {
+    padding-top: 7px;
+}
+
+.pt-6ct {
+    padding-top: 6%;
+}
+
+.mt-3ct {
+    margin-top: 3%;
+}
+
+.pt-06rem {
+    padding-top: 0.6rem !important;
+    padding-bottom: 0.6rem !important;
+}
+
+.pt-1rem {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.h-86 {
+    height: 86%;
+}
+
+.h-100 {
+    height: 90%;
+}
+
+.rel {
+    position: relative;
+}
+
+.atr {
+    display: flex;
+    flex-direction: row;
+    background-color: inherit;
+    border: 1px solid salmon;
+    width: fit-content;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.mod {
+    height: fit-content;
+    margin-left: 3px;
+    background-color: inherit;
+}
+
+.g-5 {
+    gap: 5px;
+}
+
+.g-15 {
+    gap: 15px;
+}
+
+.mt-1 {
+    margin-top: 1%;
+}
+
+.m-t-10 {
+    margin-top: 4%;
+}
+
+// main#main-area {
+//     display: grid;
+//     grid-template-columns: 18% 64% 18%;
+//     grid-template-rows: calc(75vh - 15px) calc(25vh - 20px);
+// }
+
+.cursor-dft {
+    cursor: default;
+}
+
+.cursor-point {
+    cursor: pointer;
+
+    div,
+    p,
+    h1,
+    h2,
+    h3 {
+        cursor: pointer !important;
+    }
+}
+
+
+
+#center {
+    padding-top: 10px;
+    background-image: url("/assets/mapa.jpg");
+    background-size: cover;
+}

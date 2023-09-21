@@ -1,0 +1,65 @@
+{
+  "personagens": [
+    {
+      "id": "636fb1ff72fcb30fbd905de6",
+      "nome": "Josué Salgueiro",
+      "idade": "57",
+      "gos": null,
+      "nacionalidade": "Zelândia do Norte",
+      "experiencia": 2,
+      "nivel": 2,
+      "dinheiro": 550.12,
+      "hidratacao": 46,
+      "saciedade": 50,
+      "titulo": "Mineiro",
+      "aparencia": "- Chapéu de couro\n- Sobretudo\n- Barba grisalha encobre o pescoço todo\n- Bolsa de couro sempre junto de sí\nLuva sem os dedos",
+      "personalidade": "Perseverante.\nLeal.",
+      "habito": "Gosta de coletar objetos de um lugar e colocar em outro completamente diferente.",
+      "vicio": "Sem vícios. Só bebe muito. Demais. Mas pode parar assim que  ele decidir. Pelo menos é o que ele diz.",
+      "historia": "Josué Salgueiro morava em um acampamento de mineração no interior de Goiás. Um dia ele encontra uma pedra na mina que muda completamente  o rumo de toda a sua vida.\nA pedra não era comum. Tinha vários tons da cor azul e parecia pulsar. Emanava um calor próprio e fazia com que Josué conseguisse ouvir vozes desconhecidas, do que pareciam ser pessoas falando em uma língua incompreensível.\nApós consultar em segredo com alguns conhecidos, Josué decide embarcar para São Paulo. Na cabeça tinha único um propósito: encontrar um linguísta e descobrir o que as vozes dizem.\nE nada poderia preparar Josué para o que viria a seguir. De novo sentia uma adrenalina ardente que reacendeu um lado seu que há muito tempo não tinha contato.",
+      "moralidade": "Neutro.",
+      "informacoesPersonagem": {
+        "totalPontos": 35,
+        "forca": 20,
+        "agilidade": 8,
+        "atletismo": 7,
+        "destreza": 3,
+        "pontaria": 0,
+        "furtividade": 0,
+        "percepcao": 0,
+        "inteligencia": 0,
+        "sabedoria": 0,
+        "carisma": 4,
+        "diplomacia": 7,
+        "enganacao": 5,
+        "intimidacao": 0,
+        "vontade": 3,
+        "sentirMotivacao": 2,
+        "vida": 75,
+        "energia": 85,
+        "sanidade": 50,
+        "bloqueio": 0,
+        "esquiva": 0,
+        "resistencia": 0,
+        "resiliencia": 0,
+        "iniciativa": 0
+      },
+      "quantidadePericias": null,
+      "pontosPericiasParaDistribuir": null,
+      "periciaList": [
+        "Doma de Cavalos",
+        "Medicina Indígena"
+      ],
+      "quantidadeTalentos": null,
+      "talentosList": [
+        "Memória Fotográfica"
+      ],
+      "inventario": [
+        "Tabaco",
+        "Sela",
+        "Adaga",
+        "Pedra Misteriosa"
+      ]
+    }
+  ]
+}

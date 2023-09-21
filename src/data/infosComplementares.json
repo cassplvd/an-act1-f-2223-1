@@ -1,0 +1,268 @@
+{
+  "pericias": [
+    {
+      "nome": "Doma de Cavalos",
+      "descricao": "Esta perícia permite uma grande facilidade para domar qualquer cavalo.",
+      "img": "doma-cavalos.jpg",
+      "id": 0
+    },
+    {
+      "nome": "Medicina Indígena",
+      "descricao": "Essa perícia permite uma capacidade de cura muito grande, independente do lugar que estiver.",
+      "img": "medicina-indigena.jpg",
+      "id": 1
+    }
+  ],
+  "atributos": [
+    {
+      "nome": "Motivação",
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et tortor odio. Nullam nec faucibus mauris. Aliquam sagittis, ante eu dignissim dapibus, odio nisl rhoncus nibh, ac dignissim nibh leo non nibh. Fusce imperdiet congue sagittis. Integer eu malesuada neque, in interdum magna. Vivamus rhoncus erat placerat leo pretium, vitae sodales mi ultricies.",
+      "img": "motivacao.jpg",
+      "id": 1
+    },
+    {
+      "nome": "Força",
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et tortor odio. Nullam nec faucibus mauris. Aliquam sagittis, ante eu dignissim dapibus, odio nisl rhoncus nibh, ac dignissim nibh leo non nibh. Fusce imperdiet congue sagittis. Integer eu malesuada neque, in interdum magna. Vivamus rhoncus erat placerat leo pretium, vitae sodales mi ultricies.",
+      "img": "forca.jpg",
+      "id": 2
+    },
+    {
+      "nome": "Agilidade",
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et tortor odio. Nullam nec faucibus mauris. Aliquam sagittis, ante eu dignissim dapibus, odio nisl rhoncus nibh, ac dignissim nibh leo non nibh. Fusce imperdiet congue sagittis. Integer eu malesuada neque, in interdum magna. Vivamus rhoncus erat placerat leo pretium, vitae sodales mi ultricies.",
+      "img": "agilidade.jpg",
+      "id": 3
+    },
+    {
+      "nome": "Atletismo",
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et tortor odio. Nullam nec faucibus mauris. Aliquam sagittis, ante eu dignissim dapibus, odio nisl rhoncus nibh, ac dignissim nibh leo non nibh. Fusce imperdiet congue sagittis. Integer eu malesuada neque, in interdum magna. Vivamus rhoncus erat placerat leo pretium, vitae sodales mi ultricies.",
+      "img": "atleticismo.jpg",
+      "id": 4
+    },
+    {
+      "nome": "Destreza",
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et tortor odio. Nullam nec faucibus mauris. Aliquam sagittis, ante eu dignissim dapibus, odio nisl rhoncus nibh, ac dignissim nibh leo non nibh. Fusce imperdiet congue sagittis. Integer eu malesuada neque, in interdum magna. Vivamus rhoncus erat placerat leo pretium, vitae sodales mi ultricies.",
+      "img": "destreza.jpg",
+      "id": 5
+    },
+    {
+      "nome": "Pontaria",
+      "descricao": "",
+      "img": "",
+      "id": 6
+    },
+    {
+      "nome": "Furtividade",
+      "descricao": "",
+      "img": "",
+      "id": 7
+    },
+    {
+      "nome": "Percepção",
+      "descricao": "",
+      "img": "",
+      "id": 8
+    },
+    {
+      "nome": "Inteligência",
+      "descricao": "",
+      "img": "",
+      "id": 9
+    },
+    {
+      "nome": "Sabedoria",
+      "descricao": "",
+      "img": "",
+      "id": 10
+    },
+    {
+      "nome": "Carisma",
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et tortor odio. Nullam nec faucibus mauris. Aliquam sagittis, ante eu dignissim dapibus, odio nisl rhoncus nibh, ac dignissim nibh leo non nibh. Fusce imperdiet congue sagittis. Integer eu malesuada neque, in interdum magna. Vivamus rhoncus erat placerat leo pretium, vitae sodales mi ultricies.",
+      "img": "carisma.jpg",
+      "id": 11
+    },
+    {
+      "nome": "Diplomacia",
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et tortor odio. Nullam nec faucibus mauris. Aliquam sagittis, ante eu dignissim dapibus, odio nisl rhoncus nibh, ac dignissim nibh leo non nibh. Fusce imperdiet congue sagittis. Integer eu malesuada neque, in interdum magna. Vivamus rhoncus erat placerat leo pretium, vitae sodales mi ultricies.",
+      "img": "diplomacia.jpg",
+      "id": 12
+    },
+    {
+      "nome": "Enganação",
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et tortor odio. Nullam nec faucibus mauris. Aliquam sagittis, ante eu dignissim dapibus, odio nisl rhoncus nibh, ac dignissim nibh leo non nibh. Fusce imperdiet congue sagittis. Integer eu malesuada neque, in interdum magna. Vivamus rhoncus erat placerat leo pretium, vitae sodales mi ultricies.",
+      "img": "enganacao.jpg",
+      "id": 13
+    },
+    {
+      "nome": "Intimidação",
+      "descricao": "",
+      "img": "",
+      "id": 14
+    },
+    {
+      "nome": "Vontade",
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et tortor odio. Nullam nec faucibus mauris. Aliquam sagittis, ante eu dignissim dapibus, odio nisl rhoncus nibh, ac dignissim nibh leo non nibh. Fusce imperdiet congue sagittis. Integer eu malesuada neque, in interdum magna. Vivamus rhoncus erat placerat leo pretium, vitae sodales mi ultricies.",
+      "img": "vontade.jpg",
+      "id": 15
+    },
+    {
+      "nome": "Energia",
+      "descricao": "",
+      "img": "energia.jpg",
+      "id": 16
+    },
+    {
+      "nome": "Sanidade",
+      "descricao": "",
+      "img": "sanidade.jpg",
+      "id": 17
+    },
+    {
+      "nome": "Bloqueio",
+      "descricao": "",
+      "img": "",
+      "id": 18
+    },
+    {
+      "nome": "Esquiva",
+      "descricao": "",
+      "img": "",
+      "id": 19
+    },
+    {
+      "nome": "Resistencia",
+      "descricao": "",
+      "img": "",
+      "id": 20
+    },
+    {
+      "nome": "Resiliência",
+      "descricao": "",
+      "img": "",
+      "id": 21
+    },
+    {
+      "nome": "Iniciativa",
+      "descricao": "",
+      "img": "",
+      "id": 22
+    },
+    {
+      "nome": "Vida",
+      "descricao": "",
+      "img": "vida.jpg",
+      "id": 23
+    },
+    {
+      "nome": "Saciedade",
+      "descricao": "",
+      "img": "saciedade.jpg",
+      "id": 24
+    },
+    {
+      "nome": "Hidratação",
+      "descricao": "",
+      "img": "hidratacao.jpg",
+      "id": 25
+    },
+    {
+      "nome": "Dinheiro",
+      "descricao": "",
+      "img": "dinheiro.jpg",
+      "id": 26
+    }
+  ],
+  "talentos": [
+    {
+      "nome": "Memória Fotográfica",
+      "descricao": "Consegue conjurar memórias detalhadas de situações que a maioria das pessoas não consegue.",
+      "img": "memoria-fotografica.jpg",
+      "id": 1
+    }
+  ],
+  "inventario": [
+    {
+      "nome": "Tabaco",
+      "descricao": "Tabaco que Josué sempre carrega consigo. Para uso pessoal e, principalmente, como moeda de troca para obter certas coisas que só um tabaco de alta qualidade como esse é capaz de oferecer.",
+      "img": "tabaco.jpg",
+      "id": 1
+    },
+    {
+      "nome": "Sela",
+      "descricao": "Sela de cavalo do Josué. Feita por ele quando ainda tinha seus 16 anos. É um de seus bens preferidos e algo que Josué sempre carrega consigo.",
+      "img": "sela.jpg",
+      "id": 2
+    },
+    {
+      "nome": "Adaga",
+      "descricao": "Adaga de caça simples.",
+      "img": "adaga.jpg",
+      "id": 3
+    },
+    {
+      "nome": "Pedra Misteriosa",
+      "descricao": "Pedra misteriosa encontrada por Josué na Mina de Grimacia.",
+      "img": "pedra-preciosa.jpg",
+      "id": 4
+    }
+  ],
+  "infosExternas": {
+    "jogadores": [
+      {
+        "nome": "Fausto",
+        "img": "fausto.jpg",
+        "id": 0,
+        "vida": 53
+      },
+      {
+        "nome": "Gerson",
+        "img": "gerson.jpg",
+        "id": 1,
+        "vida": 89
+      },
+      {
+        "nome": "Mafalda",
+        "img": "mafalda.jpg",
+        "id": 2,
+        "vida": 35
+      },
+      {
+        "nome": "Beraldo",
+        "img": "beraldo.jpg",
+        "id": 3,
+        "vida": 88
+      },
+      {
+        "nome": "Rosa",
+        "img": "rosa.jpg",
+        "id": 4,
+        "vida": 70
+      }
+    ],
+    "local": [
+      {
+        "id": 0,
+        "coordenadas": [
+          423,
+          329
+        ],
+        "nome": "Sierra Vista",
+        "estado": "Arizona",
+        "atividades": "Ouro",
+        "habitantes": "867",
+        "atual": true
+      },
+      {
+        "id": 1,
+        "coordenadas": [
+          247,
+          96
+        ],
+        "nome": "Los Derales",
+        "estado": "Arizona",
+        "atividades": "Ouro, Óleo",
+        "habitantes": "671",
+        "atual": false
+      }
+    ]
+  }
+}

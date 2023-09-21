@@ -1,0 +1,10 @@
+<app-top-panel></app-top-panel>
+<main id="main-area">
+    <app-mapa *ngIf="bottom === true"></app-mapa>
+    <!-- <div id="window" *ngIf="bottom === false" (windowMudou)="windowEvent($event)"> -->
+    <router-outlet></router-outlet>
+    <!-- </div> -->
+    <app-panel-left></app-panel-left>
+    <app-panel-right></app-panel-right>
+    <app-panel-bottom id="panel-bottom" *ngIf="bottom === true"></app-panel-bottom>
+</main>

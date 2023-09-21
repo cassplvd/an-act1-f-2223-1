@@ -1,0 +1,19 @@
+@keyframes atr-mudado {
+    from {
+        box-shadow: 0 0 8px 0px #82cce2;
+    }
+
+    to {
+        box-shadow: 0 0 16px 0px rgba(162, 241, 255, 0.185);
+    }
+}
+
+@keyframes valor-mudado {
+    from {
+        text-shadow: 0 0 1px #a5d3e0, 0 0 5px rgba(0, 85, 100, 0.445);
+    }
+
+    to {
+        text-shadow: 0 0 7px #78bbcfb2, 0 0 15px rgba(30, 221, 255, 0.219);
+    }
+}

@@ -1,0 +1,30 @@
+<div id="panel-bottom">
+    <div id="bottom">
+        <div class="bottom-skills">
+            <div class="bottom-skill" *ngFor="let prop of tHarray" matTooltip="{{habilidadesNames[prop]}}"
+                matTooltipPosition="above" matTooltipShowDelay="500" #tooltip="matTooltip" matTooltipClass="t-tip"
+                (click)="tooltip.show()">
+                <img [src]="imagensObject[habilidadesNames[prop]]?'../../../assets/'+imagensObject[habilidadesNames[prop]].img : 'forca.png'"
+                    class="bt-skill-icon">
+                <h3 class="bt-skill-value fill-col cursor-dft">{{topHabilidades[prop]}}</h3>
+            </div>
+        </div>
+        <div class="bottom-tabs">
+            <div class="bottom-tab fill-col" *ngFor="let tabName of tabsId" (click)="abrirTab(tabName)"
+                matTooltipClass="t-tip" matTooltip="{{tabsNames[tabName]}}" matTooltipPosition="above"
+                matTooltipShowDelay="500">
+                <div class="tab-filtro"></div>
+                <img [src]="tabsObject[tabName]?'../../../assets/'+tabsObject[tabName] : 'forca.png'"
+                    class="bt-tab-icon">
+            </div>
+        </div>
+        <div class="bottom-buttons">
+            <div class="bottom-button" (click)="openTab('last')" matTooltip="Gerenciamento" matTooltipPosition="above"
+                matTooltipShowDelay="500" #tooltip="matTooltip" matTooltipClass="t-tip">
+                <img src="../../assets/config.svg" class="bt-gerenciar-icon">
+                <div class="gerenciar-filtro"></div>
+                <!-- <img src="../../assets/gerenciamento.svg" class="bt-gerenciar-icon"> -->
+            </div>
+        </div>
+    </div>
+</div>

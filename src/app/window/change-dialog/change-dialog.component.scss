@@ -1,0 +1,38 @@
+:host {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'IM Fell English', serif;
+}
+
+button {
+    margin-right: 8px;
+}
+
+.btn-box {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.customIconSize {
+    font-size: 75px;
+    height: 75px;
+    width: 75px;
+    margin-bottom: 20px;
+    color: #E59D2C;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.h-20 {
+    font-size: 2rem;
+}

@@ -1,0 +1,62 @@
+<div class="painel" id="card-box">
+    <div class="bdg" id="main-badge" [ngClass]="sanidadeCor" matTooltipClass="t-tip" matTooltip="Sanidade: {{sanidade}}"
+        matTooltipPosition="above">
+        <!-- <div>{{energia}}</div> -->
+    </div>
+
+    <div id="pic-box">
+        <div id="pic-sep"></div>
+        <div id="bg-grd">
+            <img src="assets/minero.png" alt="" id="pic">
+            <div id="pic-grad"></div>
+        </div>
+    </div>
+
+    <div id="badges-box">
+        <div class="sec-bdg bdg roun" matTooltipClass="t-tip" matTooltipPosition="above" matTooltip="Nível: {{nivel}}">
+            <img src="../../assets/agilidade.png" alt=""
+                style="position: absolute;object-fit: cover;mix-blend-mode: overlay;width:2.4rem;">
+            <div class="badge-value">{{nivel}}</div>
+        </div>
+        <div class="main-bdg bdg roun" matTooltipClass="t-tip" matTooltipPosition="above"
+            matTooltip="Pontos: {{pontos}}"><img src="../../assets/forca.png" alt=""
+                style="position: absolute;object-fit: cover;mix-blend-mode: overlay;width:3rem;">
+            <div class="badge-value">{{pontos}}</div>
+        </div>
+        <div class="sec-bdg bdg roun" matTooltipClass="t-tip" matTooltipPosition="above"
+            matTooltip="Xp: {{experiencia}}"><img src="../../assets/pontaria.png" alt=""
+                style="position: absolute;object-fit: cover;mix-blend-mode: overlay;width:2.4rem;">
+            <div class="badge-value">{{experiencia}}</div>
+        </div>
+    </div>
+
+    <div id="title-box">
+        <p id="nome">{{nome}}</p>
+        <p id="apelido">'{{titulo}}'</p>
+    </div>
+
+    <div class="stat-bar-box">
+        <div class="stat-bar" *ngFor="let title of infosBarraNome" matTooltipClass="t-tip" matTooltipPosition="above"
+            matTooltip="{{title}}: {{infosBarraValor[infosBarraNome.indexOf(title)]}}">
+            <h2 class="stat-bar-txt">{{title}}</h2>
+            <div class="stat-bar-amt-box">
+                <mat-progress-bar mode="determinate" class="stat-bar-amt"
+                    [value]="infosBarraValor[infosBarraNome.indexOf(title)]"></mat-progress-bar>
+            </div>
+        </div>
+    </div>
+
+    <div id="stat-big">
+        <div id="money-box">
+            <div class="stat-box-bg" matTooltipClass="t-tip" matTooltipPosition="above"
+                matTooltip="Dinheiro: ${{dinheiroFull}}">
+                <h6 class="stat-box-txt">Dinheiro</h6>
+                <h1 class="stat-box-amt">
+                    <span id="dolla-sign">$</span>
+                    {{dinheiroFormatado}}
+                </h1>
+            </div>
+        </div>
+    </div>
+
+</div>

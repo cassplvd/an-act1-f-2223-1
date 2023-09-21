@@ -1,0 +1,325 @@
+.pointer,
+.pointer>* {
+    cursor: pointer !important;
+}
+
+.example-form {
+    display: grid;
+    width: 100%;
+    overflow-x: auto;
+}
+
+// --------------------------------------------
+// CONDICIONAIS
+.form-wide {
+    grid-template-columns: 20% 80%;
+    transition: grid-template-columns 0.3s ease;
+}
+
+.form-thin {
+    grid-template-columns: 30% 70%;
+    transition: grid-template-columns 0.3s ease;
+}
+
+.thin-mode {
+    width: 35.5rem !important;
+    transition: width 0.3s ease;
+}
+
+// --------------------------------------------
+
+// --------------------------------------------
+// EFEITOS DE INTERAÇÃO
+.peric-item-box:hover {
+    .peric-item-txt {
+        color: rgb(232, 212, 137);
+        text-shadow: 0 0 1px #f2e2c7, 0 0 7px #f2e2c7;
+        transition: color 0.1s ease-in, text-shadow 0.1s ease-in;
+    }
+
+    .peric-item-icon {
+        border: 2px solid var(--col-border-pics);
+        box-shadow: 0 0 1px 0 var(--col-border-pics), 0 0 7px 0 var(--col-border-pics);
+        transition: border 0.1s ease-in, box-shadow 0.1s ease-in;
+    }
+}
+
+// -----------------------------------------------
+
+
+
+// -----------------------------------------------
+// coluna 1
+
+.containerOn {
+    display: block;
+}
+
+.containerOff {
+    display: none;
+}
+
+.col1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-top: 10%;
+    overflow: hidden;
+    position: relative;
+
+
+    .aparen-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 99%;
+        height: 100%;
+    }
+}
+
+// formulario criar/editar
+.peric-edit-box {
+    width: 100%;
+    height: 77%;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 3% 0 1%;
+    margin-top: 3px;
+    overflow-y: auto;
+    position: relative;
+    gap: 0.1rem;
+}
+
+.edit-field {
+    overflow-y: auto;
+    padding: 0.5rem 0.5rem;
+    background-color: transparent;
+    width: 100%;
+    margin-bottom: 1.1rem;
+    font-size: initial;
+}
+
+textarea.edit-field {
+    resize: vertical;
+    height: 8rem;
+}
+
+mat-icon.ui-icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    color: var(--col-tex-sec);
+    top: 25%;
+    right: 0%;
+    font-size: 2rem;
+}
+
+// -------------------------------
+// botao reverter mudanças
+
+.peric-reverse-btn {
+    cursor: pointer;
+    position: absolute !important;
+    bottom: -0.2rem !important;
+    right: 0 !important;
+    height: 1.2rem !important;
+    width: 1.2rem !important;
+    padding: 0 0 !important;
+    background-color: var(--col-arrow-mid) !important;
+    border-radius: 50% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-icon.change-btn {
+    color: #C8B394;
+}
+
+mat-icon.btn-rvt {
+    position: static !important;
+    color: black;
+    font-size: 1rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+button.pure-icon {
+    min-width: 0;
+    padding: 0.5rem;
+}
+
+button.del-btn {
+    margin: auto 0 0 auto;
+}
+
+mat-icon.del-icon {
+    color: var(--col-arrow-low);
+}
+
+.btn-criar {
+    // background-color: ;
+    color: #90c748;
+    font-size: 1rem;
+    font-weight: bold;
+    width: fit-content;
+    position: sticky;
+    bottom: 0;
+    // margin: auto;
+    line-height: 1.5rem;
+}
+
+.btn-editar {
+    color: #ae5413;
+    font-size: 1rem;
+    position: sticky;
+    bottom: 0;
+    // margin: auto;
+    line-height: 1.5rem;
+}
+
+.btn-desfazer {
+    color: var(--col-arrow-mid);
+    font-size: 1rem;
+    position: sticky;
+    bottom: 0;
+    // margin: auto;
+    line-height: 1.5rem;
+}
+
+.acoes-btn-box {
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.3rem;
+}
+
+.criar-btn-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.erro-txt {
+    color: crimson;
+    font-size: 0.6rem;
+    font-family: 'Coustard';
+    position: absolute;
+    bottom: 0.1rem;
+}
+
+.erro-field {
+    outline: 2px solid var(--col-shadow-low);
+}
+
+.erro-label {
+    color: var(--col-arrow-low) !important;
+}
+
+
+// FIM Coluna 1
+// -----------------------------------------
+
+
+
+// -----------------------------------------
+// Coluna 2
+
+.col2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 3% 0 4%;
+    margin-top: 5%;
+    overflow-x: hidden;
+
+    article {
+        margin-top: 3%;
+    }
+}
+
+.peric-container {
+    height: 100%;
+    width: 40.7rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+}
+
+.cortina {
+    width: 100%;
+    height: 100%;
+    background-color: #392f25;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.8;
+    mix-blend-mode: multiply;
+}
+
+.peric-box {
+    width: 100%;
+    padding: 4% 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    align-items: start;
+    position: relative;
+}
+
+.load-box-per {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+}
+
+.peric-item-box {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.update-icon::after {
+    content: '●';
+    position: absolute;
+    bottom: -1rem;
+    width: 100%;
+    text-align: center;
+    color: #2773a7;
+    text-shadow: 0px 0px 7px #049aff, 0px 0px 7px #0363a4;
+    font-size: 0.7rem;
+}
+
+.peric-item-txt {
+    color: var(--col-tex-sec);
+    text-shadow: 0px 0px 2px #ff9c00;
+    margin-top: 3px;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    width: 6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.1s ease-in, text-shadow 0.1s ease-in;
+}
+
+.peric-item-icon {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 2px solid var(--col-border);
+    margin: auto;
+    transition: border 0.1s ease-in, box-shadow 0.1s ease-in;
+    overflow: hidden;
+}
+
+
+
+// FIM Coluna 2
+// -----------------------------------------

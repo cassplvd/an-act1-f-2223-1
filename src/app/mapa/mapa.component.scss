@@ -1,0 +1,73 @@
+.mapa {
+    object-fit: cover;
+    width: 100%;
+    // height: 616px;
+    object-position: center center;
+}
+
+.imagem-box {
+    cursor: crosshair;
+    transition: cursor 200ms;
+}
+
+.origin-on {
+    transition: transform-origin 2000ms 0ms;
+}
+
+.center-point {
+    // content: '☩';
+    position: absolute;
+    background-color: aqua;
+    width: 15px;
+    height: 15px;
+    z-index: 999;
+    // top: 50%;
+    // left: 50%;
+}
+
+.offset-point {
+    // content: '☩';
+    position: absolute;
+    background-color: rgb(255, 0, 85);
+    width: 10px;
+    height: 10px;
+    z-index: 1000;
+    // top: 50%;
+    // left: 50%;
+}
+
+.anterior-point {
+    // content: '☩';
+    position: absolute;
+    background-color: rgb(255, 115, 0);
+    width: 18px;
+    height: 18px;
+    z-index: 998s;
+    // top: 50%;
+    // left: 50%;
+}
+
+
+.pin-mapa-box {
+    cursor: pointer;
+    text-shadow: 0 0 0 transparent;
+    transition: text-shadow 500ms;
+}
+
+.pin-mapa-box>.local-icon {
+    text-shadow: 0 0 0 transparent;
+    transition: text-shadow 500ms;
+}
+
+.pin-mapa-box:hover>.local-icon {
+    // text-shadow: 0 0 3px var(--col-tex-prim), 0 0 5px var(--col-tex-prim), 0 0 8px var(--col-tex-prim);
+    text-shadow: 0 0 3px white, 0 0 5px white, 0 0 8px white;
+    transition: text-shadow 500ms;
+}
+
+.pin-shadow {
+    position: absolute;
+    color: transparent;
+    text-shadow: rgba(0, 0, 0, 0.67) 7px 3px 4px;
+    transform: rotate(-55deg) scaleY(0.8) scaleX(0.8) translate(-16px, -4px);
+}

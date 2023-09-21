@@ -1,0 +1,9 @@
+<h1 mat-dialog-title class="h-20">Tem certeza disso?</h1>
+<mat-icon class="customIconSize">warning</mat-icon>
+<div mat-dialog-content class="txt-center">
+    Você está prestes a excluir <ins>{{data.titulo}}</ins> {{data.tipo}}.
+</div>
+<div class="btn-box" mat-dialog-actions>
+    <button mat-raised-button (click)="onNoClick()">Cancelar</button>
+    <button mat-raised-button (click)="onOkClick()">Sim</button>
+</div>

@@ -1,0 +1,30 @@
+#main-area {
+    padding-top: 32px;
+    /* background-image: url("/assets/mapa.jpg");
+    background-size: cover; */
+    display: flex;
+    justify-content: center;
+}
+
+#window {
+    position: absolute;
+    width: 64%;
+    height: calc(100vh - 32px);
+    // background-color: black;
+}
+
+#panel-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 64%;
+}
+
+app-panel-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 64%;
+}
+
+app-mapa {
+    width: 64%;
+}

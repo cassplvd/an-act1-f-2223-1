@@ -1,0 +1,162 @@
+.numero-fonte {
+    font-family: "Coustard", serif;
+    font-size: 0.8rem;
+    padding-top: 0.2 !important;
+}
+
+.form-block {
+    display: block !important;
+}
+
+.field-box {
+    padding: 0.7rem;
+    gap: 0;
+}
+
+.ident-field {
+    padding: 0 4px;
+    background-color: transparent;
+    resize: none;
+}
+
+.pontos-field {
+    padding: 0 4px;
+    background-color: transparent;
+    height: 1.7rem;
+}
+
+.load-box-ide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+}
+
+.example-form {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 30% 70%;
+}
+
+.col1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10%;
+    overflow: hidden;
+    position: relative;
+
+    .aparen-info {
+        // overflow: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 65%;
+        width: 99%;
+        margin-top: 20%;
+    }
+}
+
+.grad-box {
+    position: absolute;
+    width: 100%;
+    height: 65%;
+    box-shadow: inset -70px -5px 82px -25px black;
+}
+
+.col2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 6%;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: normal;
+    padding: 0;
+
+    article {
+        margin-top: 3%;
+    }
+}
+
+.id-box {
+    width: 55%;
+    height: 50%;
+}
+
+.ident-title {
+    color: var(--col-tex-prim);
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+.ident-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--col-sep);
+    width: 100%;
+    height: fit-content;
+}
+
+.ident-name {
+    color: var(--col-tex-prim);
+    margin-top: 4px;
+    font-size: 1.5rem;
+    padding: 6px 0;
+    transition: color 500ms;
+    font-weight: bold;
+}
+
+.pontos-box {
+    width: 35%;
+    height: 50%;
+}
+
+.pers-box {
+    width: 45%;
+    min-height: 40%;
+}
+
+.psi-box {
+    height: 65%;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    margin-top: 3px;
+}
+
+.psi-field {
+    padding: 4px 4px;
+    background-color: transparent;
+    width: 100%;
+    min-height: 90%;
+    resize: none;
+}
+
+.apare-box {
+    width: 100%;
+    height: 83%;
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    margin-top: 3px;
+}
+
+.apare-field {
+    overflow-y: auto;
+    padding: 4px 4px;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    resize: none;
+}
+
+.apar-txt {
+    color: var(--col-tex-sec);
+}

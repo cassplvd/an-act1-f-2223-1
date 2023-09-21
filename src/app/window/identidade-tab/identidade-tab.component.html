@@ -1,0 +1,85 @@
+<div class="example-form h-86">
+    <div class="col1">
+        <!-- <div class="grad-box"></div> -->
+        <img src="assets/profile-pic.png" alt="" class="hist-pic">
+        <div class="aparen-info">
+            <div class="ident-info">
+                <p class="ident-name">Aparência</p>
+            </div>
+            <div class="apare-box" *ngIf="!loading" [@view]>
+                <textarea class="field apare-field" [(ngModel)]="identidade.visual.aparencia"
+                    (ngModelChange)="mudouSeAlgo('visual', 'aparencia', $event)" (click)="ativarBotoes()"
+                    (blur)="atualizarTexto()"></textarea>
+            </div>
+            <div class="load-box-ide" *ngIf="loading">
+                <mat-spinner strokeWidth="2" color="warn" diameter="50"></mat-spinner>
+            </div>
+        </div>
+    </div>
+    <div class="col2">
+        <div class="id-box">
+
+            <div class="ident-info">
+                <p class="ident-name">
+                    Identidade
+                </p>
+            </div>
+            <ul class="f-col field-box" *ngIf="!loading" [@view]>
+                <li class="f-row g-5" *ngFor="let caracteristica of identDataArray">
+                    <label for="{{caracteristica}}-field"
+                        class="main-txt label-txt">{{identidade.id.nomes[identDataArray.indexOf(caracteristica)]}}:
+                    </label>
+                    <input placeholder="..." [type]="fonteNumerosArray.includes(caracteristica)?'number':'text'"
+                        class="main-txt field ident-field" id="{{caracteristica}}-field"
+                        [ngClass]="fonteNumerosArray.includes(caracteristica)?'numero-fonte':''"
+                        [(ngModel)]="identidade.id[caracteristica]"
+                        (ngModelChange)="mudouSeAlgo('id', caracteristica, $event)" (click)="ativarBotoes()"
+                        (blur)="atualizarTexto()">
+                </li>
+            </ul>
+            <div class="load-box-ide" *ngIf="loading">
+                <mat-spinner strokeWidth="2" color="warn" diameter="50"></mat-spinner>
+            </div>
+        </div>
+        <div class="pontos-box">
+
+            <div class="ident-info">
+                <p class="ident-name">
+                    Pontuação
+                </p>
+            </div>
+            <ul class="f-col field-box" *ngIf="!loading" [@view]>
+                <li class="f-row g-5 mt-1" *ngFor="let caracteristica of pontuacaoDataArray">
+                    <label for="{{caracteristica}}-field" class="main-txt label-txt">
+                        {{identidade.pontuacao.nomes[pontuacaoDataArray.indexOf(caracteristica)]}}:
+                    </label>
+                    <input placeholder="..." type="number" class="main-txt field pontos-field"
+                        id="{{caracteristica}}-field"
+                        [ngClass]="fonteNumerosArray.includes(caracteristica)?'numero-fonte':''"
+                        [(ngModel)]="identidade.pontuacao[caracteristica]"
+                        (ngModelChange)="mudouSeAlgo('pontuacao', caracteristica, $event)" (click)="ativarBotoes()"
+                        (blur)="atualizarTexto()">
+                </li>
+            </ul>
+            <div class="load-box-ide" *ngIf="loading">
+                <mat-spinner strokeWidth="2" color="warn" diameter="50"></mat-spinner>
+            </div>
+        </div>
+        <div class="pers-box" *ngFor="let caracteristica of psiDataArray">
+            <div class="ident-info">
+                <p class="ident-name">
+                    {{identidade.psicologico.nomes[psiDataArray.indexOf(caracteristica)]}}
+                </p>
+            </div>
+            <div class="load-box-ide" *ngIf="loading">
+                <mat-spinner strokeWidth="2" color="warn" diameter="50"></mat-spinner>
+            </div>
+            <div class="psi-box" *ngIf="!loading" [@view]>
+                <textarea placeholder="..." class="field psi-field" [(ngModel)]="identidade.psicologico[caracteristica]"
+                    (ngModelChange)="mudouSeAlgo('psicologico', caracteristica, $event)" (click)="ativarBotoes()"
+                    (blur)="atualizarTexto()">
+                </textarea>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+#formulario {
+    background: #000;
+    position: relative;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.84);
+    width: 100%;
+    height: calc(100vh - 32px);
+}
+
+
+
+
+
+
+/* TOP TAB AREA */
+#tab-area {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.tab {
+    font-size: 0.7em;
+    // width: 80px;
+    text-align: center;
+    color: #ACA793;
+    font-weight: 700;
+    cursor: default;
+    font-family: 'BioRhyme', serif;
+    padding: 9px 8px 2px 8px;
+    border-right: 1px solid #ff030300;
+    border-left: 1px solid #00000000;
+    transition: background-color 100ms ease-out, color 100ms ease-out;
+}
+
+.tab-active {
+    border-right: 1px solid #42422b;
+    border-left: 1px solid #42422b;
+    color: #fff;
+    border-top: 1px solid #e59d2c;
+}
+
+.tab:hover {
+    background-color: var(--col-tex-sec);
+    color: #000000;
+    transition: background-color 30ms ease-in, color 10ms ease-in 20ms;
+}
+
+
+
+
+/* CLOSE - BUTTON */
+#close-btn {
+    position: absolute;
+    top: 4px;
+    right: 19px;
+    min-width: 0;
+    line-height: 0;
+    padding: 0;
+}
+
+.close-btn {
+    color: #ACA793;
+}
+
+.lh-0 {
+    line-height: 25px;
+}
+
+.mw-0 {
+    min-width: 64px;
+}

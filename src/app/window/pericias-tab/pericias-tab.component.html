@@ -1,0 +1,93 @@
+<div class="example-form h-86" [ngClass]="editBoxState?'form-thin':'form-wide'">
+    <div class="col1">
+        <img src="assets/profile-pic.png" alt="" class="hist-pic"
+            [ngClass]="editBoxState===false?'containerOn':'containerOff'">
+        <!-- <img src="assets/profile-pic.png" alt="" class="hist-pic" *ngIf="!editBoxState"> -->
+        <div [@editOn]="editBoxState?'show':'hide'" style="width: 100%; height: 100%;">
+            <div class="aparen-info" *ngIf="editBoxState">
+                <div class="atr-info rel">
+                    <h2 class="atr-name">{{objDeAlteracoes[tipoAtual][alterarAtual].tipo}}</h2>
+                    <mat-icon class="cursor-point ui-icon" (click)="fecharAlteracao()">highlight_off</mat-icon>
+                </div>
+                <div class="peric-edit-box">
+                    <label for="pericia-nome" class="main-txt bold mt-1"
+                        [ngClass]="erroRepeticao||erroVazio?'erro-label':''">Nome:</label>
+                    <div style="position: relative;">
+                        <input id="pericia-nome" placeholder="Dê um nome para a perícia..."
+                            class="field edit-field pt-06rem" [ngClass]="erroRepeticao||erroVazio?'erro-field':''"
+                            [(ngModel)]="objDeAlteracoes[tipoAtual][alterarAtual].nome"
+                            (ngModelChange)="mudouSeAlgo($event, 'nome')">
+                        <div class="erro-txt" *ngIf="erroRepeticao">Um item com esse nome já existe.</div>
+                        <div class="erro-txt" *ngIf="erroVazio">O item não pode ter o nome vazio.</div>
+                        <button class="peric-reverse-btn" *ngIf="undoBotao.nome" (click)="reverter('nome')">
+                            <mat-icon class="change-btn btn-rvt">replay</mat-icon>
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <label for="pericia-pic" class="main-txt bold">Imagem:</label>
+                        <input id="pericia-pic" placeholder="Link para a imagem..." class="field edit-field pt-06rem"
+                            [(ngModel)]="objDeAlteracoes[tipoAtual][alterarAtual].img"
+                            (ngModelChange)="mudouSeAlgo($event, 'img')">
+                        <button class="peric-reverse-btn" *ngIf="undoBotao.img" (click)="reverter('img')">
+                            <mat-icon class="change-btn btn-rvt">replay</mat-icon>
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <label for="pericia-descricao" class="main-txt bold">Descricao:</label>
+                        <textarea id="pericia-descricao" placeholder="Descreva a perícia..."
+                            [(ngModel)]="objDeAlteracoes[tipoAtual][alterarAtual].descricao"
+                            (ngModelChange)="mudouSeAlgo($event, 'descricao')" class="field edit-field overf-y-initial"
+                            rows="3"></textarea>
+                        <button class="peric-reverse-btn" *ngIf="undoBotao.descricao" (click)="reverter('descricao')">
+                            <mat-icon class="change-btn btn-rvt">replay</mat-icon>
+                        </button>
+                    </div>
+                    <div class="criar-btn-box">
+                        <button mat-button class="btn-criar bg-col bd-col fill-col" *ngIf="novosArray.length > 0"
+                            title="Criar Novo Item" (click)="criar()">Criar</button>
+                    </div>
+                </div>
+                <div class="acoes-btn-box" *ngIf="tipoAtual === 'editar'">
+                    <button mat-button class="pure-icon btn-editar bg-col bd-col fill-col" title="Excluir Item"
+                        (click)="excluirCheck(objDeAlteracoes[tipoAtual][alterarAtual].nome)">
+                        <mat-icon class="del-icon">delete_forever</mat-icon>
+                    </button>
+                    <button mat-button class="pure-icon btn-desfazer bg-col bd-col fill-col" (click)="reverterTudo()"
+                        title="Reverter Mudanças"
+                        [disabled]="mudadosArray.includes('editar'+alterarAtual+'nome')|| mudadosArray.includes('editar'+alterarAtual+'img') || mudadosArray.includes('editar'+alterarAtual+'descricao')?false:true">
+                        <mat-icon>restore_page</mat-icon>
+                    </button>
+                    <button mat-button class="pure-icon btn-criar bg-col bd-col fill-col" (click)="fecharAlteracao()"
+                        title="Confirmar">
+                        <mat-icon class="">check_circle</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col2 overf-y-auto">
+        <div class="atr-info">
+            <h1 class="atr-name margin-0 padd-0" (click)="ativarAlteracao('Novo')"
+                [ngClass]="editBoxState?'':'pointer'">Perícias</h1>
+        </div>
+        <div class="load-box-per" *ngIf="loading">
+            <mat-spinner strokeWidth="2" color="warn" diameter="50"></mat-spinner>
+        </div>
+        <div class="peric-container" [ngClass]="editBoxState?'thin-mode':''">
+            <div class="peric-box" *ngIf="!loading" [@view]>
+                <div class="cortina" *ngIf="editBoxState"></div>
+                <div class="peric-item-box" *ngFor="let index of contadorArray"
+                    (click)="ativarAlteracao('Editar', periciaArray[index], periciaComoObj[index].id)"
+                    [ngClass]="[mudadosArray.includes('editar'+periciaComoObj[index].id+'nome')|| mudadosArray.includes('editar'+periciaComoObj[index].id+'img') || mudadosArray.includes('editar'+periciaComoObj[index].id+'descricao') ?'update-icon':'', editBoxState?'':'pointer']"
+                    title="{{periciaArray[index]}}" (mouseenter)="mouseIn(periciaArray[index])">
+                    <div class="peric-item-icon">
+                        <img *ngIf="periciaComoObj[index].img"
+                            style="width: 100%;height: 100%; object-fit: cover;object-position: center;"
+                            src="../../../assets/{{periciaComoObj[index].img}}" alt="">
+                    </div>
+                    <div class="peric-item-txt">{{periciaArray[index]}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

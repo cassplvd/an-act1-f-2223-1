@@ -1,0 +1,92 @@
+<div class="comp-box h-86" [ngClass]="editBoxState?'form-thin':'form-wide'">
+    <div class="col1">
+        <img src="assets/profile-pic.png" alt="" class="hist-pic"
+            [ngClass]="editBoxState===false?'containerOn':'containerOff'">
+        <div [@editOn]="editBoxState?'show':'hide'" style="width: 100%; height: 100%;">
+            <div class="inv-info" *ngIf="editBoxState">
+                <div class="atr-info rel">
+                    <h2 class="atr-name">{{objDeAlteracoes[tipoAtual][alterarAtual].tipo}}</h2>
+                    <mat-icon class="cursor-point ui-icon" (click)="fecharAlteracao()">highlight_off</mat-icon>
+                </div>
+                <div class="item-edit-box">
+                    <label for="item-nome" class="main-txt bold mt-1"
+                        [ngClass]="erroRepeticao||erroVazio?'erro-label':''">Nome:</label>
+                    <div style="position: relative;">
+                        <input id="item-nome" placeholder="Dê um nome para o inventario..."
+                            class="field edit-field pt-06rem" [ngClass]="erroRepeticao||erroVazio?'erro-field':''"
+                            [(ngModel)]="objDeAlteracoes[tipoAtual][alterarAtual].nome"
+                            (ngModelChange)="mudouSeAlgo($event, 'nome')">
+                        <div class="erro-txt" *ngIf="erroRepeticao">Um item com esse nome já existe.</div>
+                        <div class="erro-txt" *ngIf="erroVazio">O item não pode ter o nome vazio.</div>
+                        <button class="inv-revert-btn" *ngIf="undoBotao.nome" (click)="reverter('nome')">
+                            <mat-icon class="change-btn btn-rvt">replay</mat-icon>
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <label for="item-pic" class="main-txt bold">Imagem:</label>
+                        <input id="item-pic" placeholder="Link para a imagem..." class="field edit-field pt-06rem"
+                            [(ngModel)]="objDeAlteracoes[tipoAtual][alterarAtual].img"
+                            (ngModelChange)="mudouSeAlgo($event, 'img')">
+                        <button class="inv-revert-btn" *ngIf="undoBotao.img" (click)="reverter('img')">
+                            <mat-icon class="change-btn btn-rvt">replay</mat-icon>
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <label for="item-descricao" class="main-txt bold">Descricao:</label>
+                        <textarea id="item-descricao" placeholder="Descreva o inventario..."
+                            class="field edit-field overf-y-initial" rows="3"
+                            [(ngModel)]="objDeAlteracoes[tipoAtual][alterarAtual].descricao"
+                            (ngModelChange)="mudouSeAlgo($event, 'descricao')"></textarea>
+                        <button class="inv-revert-btn" *ngIf="undoBotao.descricao" (click)="reverter('descricao')">
+                            <mat-icon class="change-btn btn-rvt">replay</mat-icon>
+                        </button>
+                    </div>
+                    <div class="criar-btn-box">
+                        <button mat-button class="btn-criar bg-col bd-col fill-col" *ngIf="novosArray.length > 0"
+                            title="Criar Novo Item" (click)="criar()">Criar</button>
+                    </div>
+                </div>
+                <div class="acoes-btn-box" *ngIf="tipoAtual === 'editar'">
+                    <button mat-button class="pure-icon btn-editar bg-col bd-col fill-col"
+                        *ngIf="tipoAtual === 'editar'" title="Excluir Item"
+                        (click)="excluirCheck(objDeAlteracoes[tipoAtual][alterarAtual].nome)">
+                        <mat-icon class="del-icon">delete_forever</mat-icon>
+                    </button>
+                    <button mat-button class="pure-icon btn-desfazer bg-col bd-col fill-col" (click)="reverterTudo()"
+                        title="Reverter Mudanças"
+                        [disabled]="mudadosArray.includes('editar'+alterarAtual+'nome')|| mudadosArray.includes('editar'+alterarAtual+'img') || mudadosArray.includes('editar'+alterarAtual+'descricao')?false:true">
+                        <mat-icon>restore_page</mat-icon>
+                    </button>
+                    <button mat-button class="pure-icon btn-criar bg-col bd-col fill-col" (click)="fecharAlteracao()"
+                        title="Confirmar">
+                        <mat-icon class="">check_circle</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col2 overf-y-auto">
+        <div class="load-box-inv" *ngIf="loading">
+            <mat-spinner strokeWidth="2" color="warn" diameter="50"></mat-spinner>
+        </div>
+        <div class="inv-container" *ngIf="!loading">
+            <div class="inv-box">
+                <div class="cortina" *ngIf="editBoxState"></div>
+                <div class="inv-item-container" *ngFor="let index of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]">
+                    <div class="inv-item-box cursor-point" (click)="ativarAlteracao(index)"
+                        [ngClass]="[checarClasse(index)?'update-icon':'', editBoxState?'':'pointer']"
+                        title="{{inventarioArray[index]}}">
+                        <div *ngIf="inventarioArray[index]" class="inv-item-icon"
+                            [ngClass]="inventarioArray[index] !== undefined?'icon-on':''"
+                            (mouseenter)="mouseIn(inventarioArray[index])">
+                            <img *ngIf="inventarioComoObj[index].img"
+                                style="width: 100%;height: 100%; object-fit: cover;object-position: center;"
+                                src="../../../assets/{{inventarioComoObj[index].img}}" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

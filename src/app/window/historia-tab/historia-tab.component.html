@@ -1,0 +1,19 @@
+<div class="example-form h-86">
+    <div class="col1">
+        <img src="assets/profile-pic.png" alt="" class="hist-pic">
+    </div>
+    <div class="col2">
+        <h1 class="bio-title">História</h1>
+        <div class="separator">1</div>
+        <article>
+            <div class="load-box-his" *ngIf="loading">
+                <mat-spinner strokeWidth="2" color="warn" diameter="50"></mat-spinner>
+            </div>
+            <textarea [@view] [(ngModel)]="historia" (ngModelChange)="mudouSeAlgo()" (click)="ativarBotoes()"
+                class="bio-txt field" #texto (blur)="atualizarTexto()" [ngClass]="loading === true ? 'texto-off' : ''"
+                placeholder="Conte a historia do seu personagem...">
+            </textarea>
+        </article>
+
+    </div>
+</div>
